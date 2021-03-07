@@ -135,8 +135,9 @@ let legend = L.control({
 legend.onAdd = function() {
   let div = L.DomUtil.create("div", "info legend");
 
-  const magnitudes = [ 1, 2, 3, 4, 5];
+  const magnitudes = [0, 1, 2, 3, 4, 5];
   const colors = [
+    "#98ee00",
     "#d4ee00",
     "#eecc00",
     "#ee9c00",
@@ -145,7 +146,7 @@ legend.onAdd = function() {
   ];
 
 // Looping through our intervals to generate a label with a colored square for each interval.
-  for (var i = 1; i < magnitudes.length; i++) {
+  for (var i = 0; i < magnitudes.length; i++) {
     console.log(colors[i]);
     div.innerHTML +=
       "<i style='background: " + colors[i] + "'></i> " +
